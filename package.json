@@ -1,0 +1,61 @@
+{
+  "name": "@angular-package/reactive",
+  "version": "2.0.1-beta",
+  "author": "@angular-package <contact@angular-package.dev>",
+  "description": "Automatize process of creating some rxjs features",
+  "main": "./index.scss",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  },
+  "peerDependencies": {
+    "lodash-es": "^4.17.4"
+  },
+  "devDependencies": {
+    "@types/lodash-es": "^4.17.0",
+    "stylelint": "^16.9.0",
+    "stylelint-order": "^6.0.4"
+  },
+  "scripts": {
+    "prepublishOnly": "npm install rimraf && npm run pkg && npm run clean",
+    "pkg": "npm pkg delete dependencies",
+    "clean": "./node_modules/rimraf/dist/esm/bin.mjs ./node_modules && npm pkg delete scripts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/angular-package/reactive.git"
+  },
+  "bugs": {
+    "url": "https://github.com/angular-package/reactive/issues"
+  },
+  "keywords": [
+    "Angular package",
+    "Angular Reactive",
+    "Angular ReactiveX",
+    "Angular Rxjs",
+    "Subscribe",
+    "Subject",
+    "AsyncSubject",
+    "BehaviorSubject",
+    "ReplaySubject"
+  ],
+  "funding": [
+    {
+      "type": "individual",
+      "url": "https://checkout.revolut.com/pay/048b10a3-0e10-42c8-a917-e3e9cb4c8e29"
+    },
+    {
+      "type": "individual",
+      "url": "https://docs.angular-package.dev/donate/cryptocurrency"
+    },
+    {
+      "type": "patreon",
+      "url": "https://www.patreon.com/angularpackage"
+    },
+    {
+      "type": "github",
+      "url": "https://github.com/sponsors/angular-package"
+    }
+  ]
+}
